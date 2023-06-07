@@ -28,7 +28,7 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new_node);
 	}
 
-	while (actual_node && number > actuactual_nodeal->n) /* Traverse till pos or last node */
+	while (actual_node && number > actual_node->n) /* Traverse till pos or last node */
 	{	prev_node = actual_node;
 		actual_node = actual_node->next;
 	}
