@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
-    result = ''
     for ch in str:
-        result += chr(ord(ch) & ~32)
-    print("{}".format(result))
-
+        if ord(ch) > 96 and ord(ch) < 123:
+            ch = chr(ord(ch) - 32)
+        print("{}".format(ch), end="")
+    print("")
