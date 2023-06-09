@@ -14,17 +14,20 @@ if __name__ == "__main__":
 
     result = None
 
-    if operator == '+':
-        result = add(a, b)
-    elif operator == '-':
-        result = sub(a, b)
-    elif operator == '*':
-        result = mul(a, b)
-    elif operator == '/':
-        result = div(a, b)
+    # Perform the calculation based on the operator
+    operator_functions = {
+        '+': add,
+        '-': sub,
+        '*': mul,
+        '/': div
+    }
+
+    if operator in operator_functions:
+        result = operator_functions[operator](a, b)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
     print("{} {} {} = {}".format(a, operator, b, result))
+
 
