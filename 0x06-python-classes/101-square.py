@@ -73,11 +73,11 @@ class Square:
             i = self.position[0] + self.size
             j = self.position[0]
             k = self.position[1]
-            for l in range(d):
+            for l in range(k):
                 print()
             for m in range(self.size):
                 for n in range(i):
-                    if n < s:
+                    if n < j:
                         print("{}".format(" "), end="")
                     else:
                         print("{}".format("#"), end="")
@@ -90,11 +90,11 @@ class Square:
             i = self.position[0] + self.size
             j = self.position[0]
             k = self.position[1]
-            for l in range(d):
+            for l in range(k):
                 print()
             for m in range(self.size - 1):
                 for m in range(i):
-                    if n < s:
+                    if n < j:
                         print("{}".format(" "), end="")
                     else:
                         print("{}".format("#"), end="")
