@@ -1,6 +1,10 @@
 #include <Python.h>
 #include <stdio.h>
 
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
+void print_python_float(PyObject *p);
+
 /**
   * print_python_list - prints info about Python list object if it is valid
   * @p: a Python object that is being passed as an argument 
