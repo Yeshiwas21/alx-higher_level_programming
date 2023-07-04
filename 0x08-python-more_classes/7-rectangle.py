@@ -162,4 +162,3 @@ class Rectangle:
 
         self.decrement()
         print("Bye rectangle...")
-
