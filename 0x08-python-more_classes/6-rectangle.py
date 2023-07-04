@@ -39,7 +39,7 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-        
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -51,6 +51,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
+        
         self.increment()
 
     @property
