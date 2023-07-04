@@ -138,7 +138,6 @@ class Rectangle:
 
         w = self.__width
         h = self.__height
-
         g = str(self.print_symbol)
 
         if w > 0 or h > 0:
