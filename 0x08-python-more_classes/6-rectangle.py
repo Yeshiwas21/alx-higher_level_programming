@@ -8,7 +8,7 @@ class Rectangle:
     """
     A class representing a rectangle.
     """
-    
+
     number_of_instances = 0
 
     @staticmethod
@@ -165,6 +165,6 @@ class Rectangle:
         """
         Performs the cleanup routine for the Rectangle object.
         """
-        
+
         self.decrement()
         print("Bye rectangle...")
