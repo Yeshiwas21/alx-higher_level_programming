@@ -21,7 +21,6 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -42,7 +41,6 @@ class Rectangle:
         Returns:
             int: The width of the rectangle.
         """
-
         return self.__width
 
     @width.setter
@@ -57,7 +55,6 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -72,7 +69,6 @@ class Rectangle:
         Returns:
             int: The height of the rectangle.
         """
-
         return self.__height
 
     @height.setter
@@ -87,7 +83,6 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -98,14 +93,12 @@ class Rectangle:
         """
         Returns the area of the rectangle.
         """
-
         return self.__width * self.__height
 
     def perimeter(self):
         """
         Returns the perimeter of the rectangle.
         """
-
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
@@ -115,7 +108,6 @@ class Rectangle:
         Returns:
             str: The string representation of the rectangle.
         """
-        
         rect_str = ""
         width = self.__width
         height = self.__height
