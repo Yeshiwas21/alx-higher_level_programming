@@ -21,7 +21,7 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-        
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -112,27 +112,3 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__width + self.__height)
-
-    def __str__(self):
-        """
-        Returns a string representation of the rectangle.
-
-        Returns:
-            str: The string representation of the rectangle.
-        """
-
-        rectstr = ''
-        w = self.__width
-        h = self.__height
-
-        if w == 0 or h == 0:
-            return rectstr
-
-        for i in range(h):
-            for j in range(w):
-                rectstr += '#'
-
-            if i != h - 1:
-                rectstr += '\n'
-
-        return rectstr
