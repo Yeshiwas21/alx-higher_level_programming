@@ -109,24 +109,21 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle.
-
-        Returns:
-            str: The string representation of the rectangle.
+        Prints empty string
         """
-        
-        rect_str = ""
-        width = self.__width
-        height = self.__height
 
-        if width == 0 or height == 0:
-            return rect_str
+        rectstr = ''
+        w = self.__width
+        h = self.__height
 
-        for i in range(height):
-            for j in range(width):
-                rect_str += "#"
+        if w == 0 or h == 0:
+            return rectstr
 
-            if i != height - 1:
-                rect_str += "\n"
+        for i in range(h):
+            for j in range(w):
+                rectstr += '#'
 
-        return rect_str
+            if i != h - 1:
+                rectstr += '\n'
+
+        return rectstr
