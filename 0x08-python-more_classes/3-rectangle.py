@@ -42,7 +42,7 @@ class Rectangle:
         Returns:
             int: The width of the rectangle.
         """
-        
+
         return self.__width
 
     @width.setter
@@ -115,7 +115,7 @@ class Rectangle:
         Returns:
             str: The string representation of the rectangle.
         """
-
+        
         rect_str = ""
         width = self.__width
         height = self.__height
