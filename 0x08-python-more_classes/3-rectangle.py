@@ -109,7 +109,10 @@ class Rectangle:
 
     def __str__(self):
         """
-        Prints empty string
+        Returns a string representation of the rectangle.
+
+        Returns:
+            str: The string representation of the rectangle.
         """
 
         rectstr = ''
