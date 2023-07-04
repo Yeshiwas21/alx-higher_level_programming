@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Amodule with a Rectangle class
+A module with a Rectangle class
 """
 
 
@@ -16,7 +16,6 @@ class Rectangle:
         """
         Increments the instances
         """
-
         Rectangle.number_of_instances += 1
 
     @staticmethod
@@ -24,7 +23,6 @@ class Rectangle:
         """
         Decrements the instances
         """
-
         Rectangle.number_of_instances -= 1
 
     def __init__(self, width=0, height=0):
@@ -51,7 +49,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
-        
+
         self.increment()
 
     @property
