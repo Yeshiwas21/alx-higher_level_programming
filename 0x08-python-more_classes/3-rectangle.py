@@ -109,11 +109,11 @@ class Rectangle:
 
     def __str__(self):
         """
-    Returns a string representation of the rectangle.
+        Returns a string representation of the rectangle.
 
-    Returns:
+        Returns:
         str: The string representation of the rectangle.
-    """
+        """
         rectstr = ''
         w = self.__width
         h = self.__height
@@ -129,4 +129,3 @@ class Rectangle:
                 rectstr += '\n'
 
         return rectstr
-
