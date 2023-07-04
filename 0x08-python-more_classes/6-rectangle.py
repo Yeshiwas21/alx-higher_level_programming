@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A module with a Rectangle class
+Amodule with a Rectangle class
 """
 
 
@@ -8,22 +8,6 @@ class Rectangle:
     """
     A class representing a rectangle.
     """
-
-    number_of_instances = 0
-
-    @staticmethod
-    def increment():
-        """
-        Increments the instances
-        """
-        Rectangle.number_of_instances += 1
-
-    @staticmethod
-    def decrement():
-        """
-        Decrements the instances
-        """
-        Rectangle.number_of_instances -= 1
 
     def __init__(self, width=0, height=0):
         """
@@ -37,7 +21,6 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -49,8 +32,6 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
-
-        self.increment()
 
     @property
     def width(self):
@@ -165,5 +146,4 @@ class Rectangle:
         Performs the cleanup routine for the Rectangle object.
         """
 
-        self.decrement()
         print("Bye rectangle...")
