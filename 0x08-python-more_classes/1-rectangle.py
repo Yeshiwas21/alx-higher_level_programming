@@ -21,17 +21,20 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-        if not isinstance(width, int):
-            raise TypeError("Width must be an integer.")
-        if width < 0:
-            raise ValueError("Width must be >= 0.")
-        self.__width = width
 
-        if not isinstance(height, int):
-            raise TypeError("Height must be an integer.")
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = width
+
+        if type(height) != int:
+            raise TypeError("height must be an integer")
         if height < 0:
-            raise ValueError("Height must be >= 0.")
-        self.__height = height
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = height
 
     @property
     def width(self):
@@ -41,6 +44,7 @@ class Rectangle:
         Returns:
             int: The width of the rectangle.
         """
+
         return self.__width
 
     @width.setter
@@ -55,11 +59,13 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-        if not isinstance(value, int):
-            raise TypeError("Width must be an integer.")
-        if value < 0:
-            raise ValueError("Width must be >= 0.")
-        self.__width = value
+
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -69,6 +75,7 @@ class Rectangle:
         Returns:
             int: The height of the rectangle.
         """
+
         return self.__height
 
     @height.setter
@@ -83,9 +90,10 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-        if not isinstance(value, int):
-            raise TypeError("Height must be an integer.")
-        if value < 0:
-            raise ValueError("Height must be >= 0.")
-        self.__height = value
 
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
