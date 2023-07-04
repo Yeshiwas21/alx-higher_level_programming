@@ -136,7 +136,6 @@ class Rectangle:
             str: The string representation of the rectangle.
         """
 
-        rectstr = ''
         w = self.__width
         h = self.__height
 
