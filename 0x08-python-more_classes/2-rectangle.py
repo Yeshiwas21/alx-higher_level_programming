@@ -21,20 +21,17 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-
-        if type(width) != int:
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = width
+        self.__width = width
 
-        if type(height) != int:
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self.__height = height
+        self.__height = height
 
     @property
     def width(self):
@@ -44,7 +41,6 @@ class Rectangle:
         Returns:
             int: The width of the rectangle.
         """
-
         return self.__width
 
     @width.setter
@@ -59,8 +55,7 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
@@ -75,7 +70,6 @@ class Rectangle:
         Returns:
             int: The height of the rectangle.
         """
-
         return self.__height
 
     @height.setter
@@ -90,8 +84,7 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
@@ -100,18 +93,15 @@ class Rectangle:
 
     def area(self):
         """
-        returns the area of the rectangle
+        Returns the area of the rectangle.
         """
-
-        return(self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """
-        Returns perimeter of the rectangle
+        Returns the perimeter of the rectangle.
         """
-
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return(2 * (self.__width + self.__height))
-
+            return 2 * (self.__width + self.__height)
