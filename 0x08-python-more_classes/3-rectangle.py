@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Amodule with a Rectangle class
+A module with a Rectangle class
 """
 
 
@@ -21,7 +21,7 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
-        
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -42,7 +42,6 @@ class Rectangle:
         Returns:
             int: The width of the rectangle.
         """
-
         return self.__width
 
     @width.setter
@@ -57,13 +56,11 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -73,7 +70,6 @@ class Rectangle:
         Returns:
             int: The height of the rectangle.
         """
-
         return self.__height
 
     @height.setter
@@ -88,51 +84,43 @@ class Rectangle:
             TypeError: If value is not an integer.
             ValueError: If value is negative.
         """
-
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
+        self.__height = value
 
     def area(self):
         """
         Returns the area of the rectangle.
         """
-
         return self.__width * self.__height
 
     def perimeter(self):
         """
         Returns the perimeter of the rectangle.
         """
-
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        else:
-            return 2 * (self.__width + self.__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """
         Returns a string representation of the rectangle.
 
         Returns:
-        str: The string representation of the rectangle.
+            str: The string representation of the rectangle.
         """
+        rect_str = ""
+        width = self.__width
+        height = self.__height
 
-        rectstr = ''
-        w = self.__width
-        h = self.__height
+        if width == 0 or height == 0:
+            return rect_str
 
-        if w == 0 or h == 0:
-            return rectstr
+        for i in range(height):
+            for j in range(width):
+                rect_str += "#"
 
-        for i in range(h):
-            for j in range(w):
-                rectstr += '#'
+            if i != height - 1:
+                rect_str += "\n"
 
-            if i != h - 1:
-                rectstr += '\n'
-
-        return rectstr
+        return rect_str
