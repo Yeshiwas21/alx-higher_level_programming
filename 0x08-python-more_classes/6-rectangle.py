@@ -39,6 +39,7 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
+        
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -167,4 +168,3 @@ class Rectangle:
 
         self.decrement()
         print("Bye rectangle...")
-
