@@ -8,6 +8,7 @@ class Rectangle:
     """
     A class representing a rectangle.
     """
+
     number_of_instances = 0
 
     @staticmethod
