@@ -106,3 +106,24 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """
+        Prints empty string
+        """
+
+        rectstr = ''
+        w = self.__width
+        h = self.__height
+
+        if w == 0 or h == 0:
+            return rectstr
+
+        for i in range(h):
+            for j in range(w):
+                rectstr += '#'
+
+            if i != h - 1:
+                rectstr += '\n'
+
+        return rectstr
