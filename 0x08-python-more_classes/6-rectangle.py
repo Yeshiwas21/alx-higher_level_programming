@@ -9,6 +9,24 @@ class Rectangle:
     A class representing a rectangle.
     """
 
+    number_of_instances = 0
+
+    @staticmethod
+    def increment():
+        """
+        Increments the instances
+        """
+
+        Rectangle.number_of_instances += 1
+
+    @staticmethod
+    def decrement():
+        """
+        Decrements the instances
+        """
+
+        Rectangle.number_of_instances -= 1
+
     def __init__(self, width=0, height=0):
         """
         Initializes a rectangle with the given width and height.
