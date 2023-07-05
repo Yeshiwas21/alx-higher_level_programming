@@ -33,8 +33,8 @@ class Rectangle:
         Initializes a rectangle with the given width and height.
 
         Args:
-            width (int, optional): The width of the rectangle. Defaults to 0.
-            height (int, optional): The height of the rectangle. Defaults to 0.
+            width (int, optional): The width of the rectangle. Defaults to 0
+            height (int, optional): The height of the rectangle. Defaults to 0
 
         Raises:
             TypeError: If width or height is not an integer.
