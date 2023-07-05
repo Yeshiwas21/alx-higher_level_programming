@@ -120,11 +120,13 @@ class Rectangle:
         """
         w = self.__width
         h = self.__height
-
         g = str(self.print_symbol)
 
-        if w > 0 and h > 0:
-            return '{}{}'.format((g * w + '\n') * (h - 1), g * w)
+        if w == 0 or h == 0:
+            return ''
+        rectangle_str = ((g * w + '\n') * (h - 1))
+
+        return rectangle_str + g * w
 
     def __repr__(self):
         """
