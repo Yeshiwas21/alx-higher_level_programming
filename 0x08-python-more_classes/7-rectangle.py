@@ -124,9 +124,9 @@ class Rectangle:
 
         if w == 0 or h == 0:
             return ''
-        rectangle_str = ((g * w + '\n') * (h - 1))
+        rectangle_str = (((g * w) + '\n') * (h - 1))
 
-        return rectangle_str + g * w
+        return rectangle_str + (g * w)
 
     def __repr__(self):
         """
