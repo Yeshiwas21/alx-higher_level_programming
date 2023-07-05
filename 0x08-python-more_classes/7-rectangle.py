@@ -115,9 +115,13 @@ class Rectangle:
         Returns:
             str: The string representation of the rectangle.
         """
-        if self._width == 0 or self._height == 0:
-            return ''
-        return (str(self.print_symbol) * self._width + '\n') * (self._height - 1) + str(self.print_symbol) * self._width
+        w = self.__width
+        h = self.__height
+
+        g = str(self.print_symbol)
+
+        if w > 0 or h > 0:
+            return '{}{}'.format((g * w + '\n') * (h - 1), g * w)
 
     def __repr__(self):
         """
