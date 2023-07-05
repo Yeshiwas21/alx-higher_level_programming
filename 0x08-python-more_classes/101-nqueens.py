@@ -2,7 +2,7 @@
 """Solves the N-queens puzzle.
 
 Determines all possible solutions to placing N
-non-attacking queens on an NxN chessboard.
+N non-attacking queens on an NxN chessboard.
 
 Example:
     $ ./101-nqueens.py N
@@ -18,10 +18,12 @@ where `r` and `c` represent the row and column, respectively, where a
 queen must be placed on the chessboard.
 """
 
+import sys
+
+
 def init_board(n):
     """Initialize an `n`x`n` sized chessboard with 0's."""
-    board = [[' ' for _ in range(n)] for _ in range(n)]
-    return board
+    return [[' ' for _ in range(n)] for _ in range(n)]
 
 
 def board_deepcopy(board):
@@ -75,7 +77,7 @@ def xout(board, row, col):
     for r in range(row - 1, -1, -1):
         if c < 0:
             break
-        board[r][c]
+        board[r][c] = "x"
         c -= 1
     # X out all spots diagonally up to the right
     c = col + 1
@@ -118,17 +120,22 @@ def recursive_solve(board, row, queens, solutions):
     return solutions
 
 
-if __name__ == "__main__":
-    n = input("Enter the value of N: ")
-    if not n.isdigit():
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        return 1
+    if not sys.argv[1].isdigit():
         print("N must be a number")
-        exit(1)
-    n = int(n)
-    if n < 4:
+        return 1
+    if int(sys.argv[1]) < 4:
         print("N must be at least 4")
-        exit(1)
+        return 1
 
-    board = init_board(n)
+    board = init_board(int(sys.argv[1]))
     solutions = recursive_solve(board, 0, 0, [])
     for sol in solutions:
         print(sol)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
