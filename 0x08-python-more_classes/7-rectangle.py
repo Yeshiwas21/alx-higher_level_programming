@@ -121,6 +121,8 @@ class Rectangle:
         rectangle_str = (str(self.print_symbol) * self._width + '\n') * (self._height - 1)
         rectangle_str += str(self.print_symbol) * self._width
 
+        return rectangle_str
+
     def __repr__(self):
         """
         Returns the string representation of the Rectangle.
