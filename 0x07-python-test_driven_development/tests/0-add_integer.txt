@@ -1,0 +1,61 @@
+This module is about adding integers.
+
+=====================================
+
+We are importing add_integer.
+
+>>> add_integer = __import__("add_integer_3").add_integer
+
+
+==============================
+SUCCESS CASES
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(102, -2.5)
+100
+
+>>> add_integer(float("inf"), 8)
+89
+
+>>> add_integer(8, float("inf"))
+89
+
+
+==============================================
+FAIL CASES
+==============================================
+
+>>> add_integer([], 8)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(8, [])
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(None, 8)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(8, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
