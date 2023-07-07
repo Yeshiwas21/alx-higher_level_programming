@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""
+Unittests for max_integer([..]).
+"""
 
 import unittest
 from max_integer import max_integer
