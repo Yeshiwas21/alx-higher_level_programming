@@ -6,7 +6,7 @@ defined inherits_from function
 
 def inherits_from(obj, a_class):
     """
-    checks instance of a class that inherited from the specific class
+    Checks if `obj` is an instance of a class that inherited from `a_class`.
 
     Args:
         obj: The object to check.
@@ -14,9 +14,9 @@ def inherits_from(obj, a_class):
 
     Returns:
         True if `obj` is an instance of a class that inherited from `a_class`,
-        False otherwise.    
+        False otherwise.
     """
 
     if issubclass(type(obj), a_class) is True and type(obj) != a_class:
-        return (True)
-    return (False)
+        return True
+    return False
