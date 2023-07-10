@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-defined inherits_from function
+A function that checks if an object is an instance of a specific class.
 """
 
 
