@@ -148,7 +148,7 @@ Another friendly reminder that the original list is unaltered :)
 ::
 
     >>> print(my_list)
-    ['Betty', 'Dagnaw', 'Holberton', 'School', 'Yeshiwas']
+    ['Yeshiwas', 'Dagnaw', 'School', 'Holberton', 'Betty']
 
 Nothing to sort with empty lists.
 
