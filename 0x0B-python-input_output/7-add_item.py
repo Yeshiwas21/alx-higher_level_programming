@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module demonstrates the usage of saving and loading a list of items to a JSON file.
+Script for adding command line arguments to a JSON file.
 """
 
 import sys
