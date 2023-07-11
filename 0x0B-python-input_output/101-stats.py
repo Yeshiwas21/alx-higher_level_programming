@@ -2,6 +2,7 @@
 """
 Script for log parsing
 """
+
 import sys
 
 def print_stats(size, status_codes):
