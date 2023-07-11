@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-defined module
+A defined module
 """
 
 
