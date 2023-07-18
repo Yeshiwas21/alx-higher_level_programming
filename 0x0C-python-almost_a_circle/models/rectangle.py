@@ -163,3 +163,38 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """
+        Update the attributes of the `Rectangle` instance.
+
+        Args:
+            *args: Variable-length argument list.
+            **kwargs: Arbitrary keyword arguments.
+
+        Returns:
+            None
+        """
+        num_args = len(args)
+        if num_args > 0:
+            if num_args > 0:
+                self.id = args[0]
+            if num_args > 1:
+                self.__width = args[1]
+            if num_args > 2:
+                self.__height = args[2]
+            if num_args > 3:
+                self.__x = args[3]
+            if num_args > 4:
+                self.__y = args[4]
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.__width = kwargs['width']
+            if 'height' in kwargs:
+                self.__height = kwargs['height']
+            if 'x' in kwargs:
+                self.__x = kwargs['x']
+            if 'y' in kwargs:
+                self.__y = kwargs['y']
