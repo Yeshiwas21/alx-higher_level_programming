@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Defines a square class."""
-
 from models.rectangle import Rectangle
 
 
@@ -17,10 +16,11 @@ class Square(Rectangle):
             id (int): The identity of the new Square.
         """
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     @property
     def size(self):
-        """Get or set the size of the Square."""
+        """Get/set the size of the Square."""
         return self.width
 
     @size.setter
