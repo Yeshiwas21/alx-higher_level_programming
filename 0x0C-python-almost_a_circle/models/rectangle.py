@@ -198,3 +198,23 @@ class Rectangle(Base):
                 self.__x = kwargs['x']
             if 'y' in kwargs:
                 self.__y = kwargs['y']
+
+        def to_dictionary(self):
+            """
+            Return a dictionary representation of the rectangle.
+
+            The method returns a dictionary with the attributes 
+            of the `Rectangle` object. The dictionary includes the keys 
+            'id', 'width', 'height', 'x', and 'y', mapping
+            to their corresponding attribute values.
+
+            Returns:
+                A dictionary representing the `Rectangle` object.
+            """
+            return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+            }
