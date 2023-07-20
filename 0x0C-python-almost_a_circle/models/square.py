@@ -40,8 +40,6 @@ class Square(Rectangle):
         """
         Update the attributes of the square.
 
-        The method assigns the provided arguments or keyword arguments to the 
-        corresponding attributes of the `Square` object.
         The attributes that can be updated include 'id', 'size', 'x', and 'y'.
 
         Args:
