@@ -77,4 +77,3 @@ class Square(Rectangle):
                 'y': self.y
                 }
         return square_dict
-
