@@ -11,4 +11,3 @@ convertedArr.forEach(element => {
 });
 
 console.log(newObj);
-
