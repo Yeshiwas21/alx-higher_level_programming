@@ -1,7 +1,8 @@
 #!/bin/bash
-# This script takes in a URL, sends a GET request, and displays the body of the response for a 200 status code
-curl -sL "$1" -w "%{http_code}" -o /dev/null | {
+# Get the response body for a given URL for 200 status code responses.
+curl -sL "$1" -o /dev/null -w "%{http_code}" | {
     read code
+    # Check if the status code is 200 before displaying the body
     if [ "$code" -eq 200 ]; then
         curl -sL "$1"
     fi
