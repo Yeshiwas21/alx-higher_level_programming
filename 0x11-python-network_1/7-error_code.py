@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-"""Takes in a URL, sends a request, and displays the body of the response.
-   If the HTTP status code is greater than or equal to 400, print an error message.
+"""Sends a request to a given URL and displays the response body.
+
+Usage: ./7-error_code.py <URL>
+  - Handles HTTP errors.
 """
-
-import requests
 import sys
+import requests
 
-url = sys.argv[1]
 
-try:
-    response = requests.get(url)
-    response.raise_for_status()  # Raises an HTTPError for bad responses (4xx or 5xx)
-    print(response.text)
-except requests.exceptions.HTTPError as err:
-    print("Error code:", response.status_code)
-    sys.exit(response.status_code)
+if __name__ == "__main__":
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
+    else:
+        print(r.text)
