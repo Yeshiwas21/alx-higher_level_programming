@@ -14,3 +14,4 @@ try:
     print(response.text)
 except requests.exceptions.HTTPError as err:
     print("Error code:", response.status_code)
+    sys.exit(response.status_code)
